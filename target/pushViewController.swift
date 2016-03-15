@@ -13,6 +13,7 @@ class pushViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
+        self.title = "首页"
     }
     
     override func didReceiveMemoryWarning() {

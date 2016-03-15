@@ -13,6 +13,7 @@ class myViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
+        self.title = "我的"
     }
 
     override func didReceiveMemoryWarning() {
