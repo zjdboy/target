@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  config.swift
 //  target
 //
 //  Created by zhangjidong on 16/3/16.
@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-
 
 let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
 let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height

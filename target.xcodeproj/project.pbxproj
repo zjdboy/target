@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A0217FA21C9875B500D23461 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0217FA11C9875B500D23461 /* config.swift */; };
+		A0217FA81C9878FB00D23461 /* pushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0217FA71C9878FB00D23461 /* pushViewController.swift */; };
+		A0217FAA1C98794600D23461 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0217FA91C98794600D23461 /* config.swift */; };
 		A02B7B971C97B532006E792D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B7B961C97B532006E792D /* AppDelegate.swift */; };
 		A02B7B991C97B532006E792D /* myViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B7B981C97B532006E792D /* myViewController.swift */; };
 		A02B7B9E1C97B532006E792D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A02B7B9D1C97B532006E792D /* Assets.xcassets */; };
@@ -15,7 +16,6 @@
 		A02B7BAC1C97B532006E792D /* targetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B7BAB1C97B532006E792D /* targetTests.swift */; };
 		A02B7BB71C97B532006E792D /* targetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B7BB61C97B532006E792D /* targetUITests.swift */; };
 		A038E0EC1C9803B200A04E45 /* findUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038E0EB1C9803B200A04E45 /* findUIViewController.swift */; };
-		A038E0EE1C9803E000A04E45 /* pushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038E0ED1C9803E000A04E45 /* pushViewController.swift */; };
 		A05278321C97B98000B9B3C0 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05278311C97B98000B9B3C0 /* GuideViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A0217FA11C9875B500D23461 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		A0217FA71C9878FB00D23461 /* pushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pushViewController.swift; sourceTree = "<group>"; };
+		A0217FA91C98794600D23461 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		A02B7B931C97B532006E792D /* target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = target.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02B7B961C97B532006E792D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A02B7B981C97B532006E792D /* myViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		A02B7BB61C97B532006E792D /* targetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = targetUITests.swift; sourceTree = "<group>"; };
 		A02B7BB81C97B532006E792D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A038E0EB1C9803B200A04E45 /* findUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = findUIViewController.swift; sourceTree = "<group>"; };
-		A038E0ED1C9803E000A04E45 /* pushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pushViewController.swift; sourceTree = "<group>"; };
 		A05278311C97B98000B9B3C0 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,8 +110,8 @@
 				A02B7BA21C97B532006E792D /* Info.plist */,
 				A05278311C97B98000B9B3C0 /* GuideViewController.swift */,
 				A038E0EB1C9803B200A04E45 /* findUIViewController.swift */,
-				A038E0ED1C9803E000A04E45 /* pushViewController.swift */,
-				A0217FA11C9875B500D23461 /* config.swift */,
+				A0217FA71C9878FB00D23461 /* pushViewController.swift */,
+				A0217FA91C98794600D23461 /* config.swift */,
 			);
 			path = target;
 			sourceTree = "<group>";
@@ -268,10 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A02B7B991C97B532006E792D /* myViewController.swift in Sources */,
-				A0217FA21C9875B500D23461 /* config.swift in Sources */,
-				A038E0EE1C9803E000A04E45 /* pushViewController.swift in Sources */,
 				A02B7B971C97B532006E792D /* AppDelegate.swift in Sources */,
 				A05278321C97B98000B9B3C0 /* GuideViewController.swift in Sources */,
+				A0217FAA1C98794600D23461 /* config.swift in Sources */,
+				A0217FA81C9878FB00D23461 /* pushViewController.swift in Sources */,
 				A038E0EC1C9803B200A04E45 /* findUIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
