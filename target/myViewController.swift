@@ -22,6 +22,7 @@ class myViewController: UIViewController , UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "我的"
         
         //初始化数据，这一次数据，我们放在属性列表文件里
         self.allnames =  [
