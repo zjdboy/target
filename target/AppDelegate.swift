@@ -19,18 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: CGRectMake(0,0,SCREEN_WIDTH,SCREEN_HEIGHT))
         
         //判断App是否第一次启动
-        if(!NSUserDefaults.standardUserDefaults().boolForKey("firstLaunch"))
-        {
+//        if(!NSUserDefaults.standardUserDefaults().boolForKey("firstLaunch"))
+//        {
             self.window?.rootViewController = GuideViewController()
             self.window?.makeKeyAndVisible()
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstLaunch")
-        }
-        else
-        {
-            self.window?.rootViewController = myViewController()
-            self.window?.makeKeyAndVisible()
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstLaunch")
-        }
+//        }
+//        else
+//        {
+//            self.window?.rootViewController = myViewController()
+//            self.window?.makeKeyAndVisible()
+//            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstLaunch")
+//        }
         return true
     }
 
