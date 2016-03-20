@@ -12,6 +12,9 @@ class indexViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //延迟3秒
+        NSThread.sleepForTimeInterval(3.0)
         self.view.backgroundColor = UIColor.whiteColor()
         self.title = "首页"
     }
