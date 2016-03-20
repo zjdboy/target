@@ -1,5 +1,5 @@
 //
-//  pushViewController.swift
+//  chatViewController.swift
 //  target
 //
 //  Created by zhangjidong on 16/3/16.
@@ -8,18 +8,16 @@
 
 import UIKit
 
-class pushViewController: UIViewController {
+class chatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
-        self.title = "首页"
-        // Do any additional setup after loading the view.
+        self.title = "消息"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 

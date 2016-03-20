@@ -52,26 +52,26 @@ class GuideViewController: UIViewController,UIScrollViewDelegate {
      */
     func buttonClick(button:UIButton)
     {
-        let tabbatController = UITabBarController()
+        let tabbarController = UITabBarController()
+        let indexController = UINavigationController(rootViewController: indexViewController())
+        let chatController = UINavigationController(rootViewController: chatViewController())
         let myController = UINavigationController(rootViewController: myViewController())
-        let pushController = UINavigationController(rootViewController: pushViewController())
-        let findController = UINavigationController(rootViewController: findViewController())
         
-        tabbatController.viewControllers = [myController,pushController,findController]
+        tabbarController.viewControllers = [indexController,chatController,myController]
         
-        let tabitem1 = UITabBarItem(title: "我的", image: UIImage(named: "tabbar_me"), selectedImage: UIImage(named: "tabbar_me_selected"))
-        let tabitem2 = UITabBarItem(title: "发现", image: UIImage(named: "tabbar_chat"), selectedImage: UIImage(named: "tabbar_chat_selected"))
-        let tabitem3 = UITabBarItem(title: "首页", image: UIImage(named: "tabbar_home"), selectedImage: UIImage(named: "tabbar_home_selected"))
+        let tabitem1 = UITabBarItem(title: "首页", image: UIImage(named:"tabbar_home"), selectedImage: UIImage(named: "tabbar_home_selected"))
+        let tabitem2 = UITabBarItem(title: "消息", image: UIImage(named: "tabbar_chat"), selectedImage: UIImage(named: "tabbar_chat_selected"))
+        let tabitem3 = UITabBarItem(title: "我的", image: UIImage(named: "tabbar_me"), selectedImage: UIImage(named: "tabbar_me_selected"))
         
-        myController.tabBarItem = tabitem1
-        pushController.tabBarItem = tabitem2
-        findController.tabBarItem = tabitem3
+        indexController.tabBarItem = tabitem1
+        chatController.tabBarItem = tabitem2
+        myController.tabBarItem = tabitem3
         
-        myController.tabBarController?.tabBar.tintColor = UIColor(colorLiteralRed: 235/255, green: 114/255, blue: 118/255, alpha: 1)
+        myController.tabBarController?.tabBar.tintColor = MAIN_RED
         
         
         //跳转页面
-        self.presentViewController(tabbatController, animated: true, completion: nil)
+        self.presentViewController(tabbarController, animated: true, completion: nil)
     }
     
     /**

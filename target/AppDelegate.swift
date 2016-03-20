@@ -19,18 +19,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: CGRectMake(0,0,SCREEN_WIDTH,SCREEN_HEIGHT))
         
         //判断App是否第一次启动
-//        if(!NSUserDefaults.standardUserDefaults().boolForKey("firstLaunch"))
-//        {
+        if(!NSUserDefaults.standardUserDefaults().boolForKey("firstLaunch"))
+        {
             self.window?.rootViewController = GuideViewController()
             self.window?.makeKeyAndVisible()
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstLaunch")
-//        }
-//        else
-//        {
-//            self.window?.rootViewController = myViewController()
-//            self.window?.makeKeyAndVisible()
-//            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstLaunch")
-//        }
+        }
+        else
+        {
+            
+            let tabbatController = UITabBarController()
+            
+            let indexController = UINavigationController(rootViewController: indexViewController())
+            let chatController = UINavigationController(rootViewController: chatViewController())
+            let myController = UINavigationController(rootViewController: myViewController())
+            
+            tabbatController.viewControllers = [indexController,chatController,myController]
+            
+            let tabitem1 = UITabBarItem(title: "首页", image: UIImage(named:"tabbar_home"), selectedImage: UIImage(named: "tabbar_home_selected"))
+            let tabitem2 = UITabBarItem(title: "消息", image: UIImage(named: "tabbar_chat"), selectedImage: UIImage(named: "tabbar_chat_selected"))
+            let tabitem3 = UITabBarItem(title: "我的", image: UIImage(named: "tabbar_me"), selectedImage: UIImage(named: "tabbar_me_selected"))
+            
+            indexController.tabBarItem = tabitem1
+            chatController.tabBarItem = tabitem2
+            myController.tabBarItem = tabitem3
+            
+            
+            indexController.tabBarController?.tabBar.tintColor = MAIN_RED
+            
+            self.window?.rootViewController = tabbatController
+            self.window?.makeKeyAndVisible()
+            
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstLaunch")
+        }
         return true
     }
 
