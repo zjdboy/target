@@ -22,7 +22,7 @@ class GuideViewController: UIViewController,UIScrollViewDelegate {
         pageControl.currentPageIndicatorTintColor = UIColor.redColor()
         pageControl.pageIndicatorTintColor = UIColor.whiteColor()
         pageControl.numberOfPages = 4
-        pageControl.addTarget(self, action: "scrollViewDidEndDecelerating:", forControlEvents: UIControlEvents.ValueChanged)
+        pageControl.addTarget(self, action: #selector(UIScrollViewDelegate.scrollViewDidEndDecelerating(_:)), forControlEvents: UIControlEvents.ValueChanged)
         
         //配置scrollView
         scrollView.frame = self.view.bounds
@@ -32,7 +32,7 @@ class GuideViewController: UIViewController,UIScrollViewDelegate {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.delegate = self
         self.view.addSubview(scrollView)
-        for(var i=0;i<4;i++)
+        for i in 0 ..< 4
         {
             let image = UIImage(named: "Guide_\(i+1)")
             let imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
@@ -91,7 +91,7 @@ class GuideViewController: UIViewController,UIScrollViewDelegate {
             self.btn.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
             self.btn.backgroundColor = UIColor.orangeColor()
             self.btn.alpha = 0
-            self.btn.addTarget(self, action: "buttonClick:", forControlEvents: UIControlEvents.TouchUpInside)
+            self.btn.addTarget(self, action: #selector(GuideViewController.buttonClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             UIView.animateWithDuration(1.5, delay: 0.5, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
                 self.btn.frame = CGRectMake(3*self.view.frame.width, self.view.frame.height-100, self.view.frame.width, 50)
                 self.btn.alpha = 1
